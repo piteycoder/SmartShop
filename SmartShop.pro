@@ -19,11 +19,13 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     product.cpp \
+    searchproductarea.cpp \
     storage.cpp
 
 HEADERS += \
     mainwindow.h \
     product.h \
+    searchproductarea.h \
     storage.h
 
 FORMS +=

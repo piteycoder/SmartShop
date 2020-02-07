@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    if(additional)
+        delete additional;
     delete layout;
     delete central_widget;
     delete ui;
@@ -38,7 +40,7 @@ void MainWindow::react(){
     int i;
     for(i=0; clicked!=buttons[i];++i){}
     switch(i){
-    case 0: {additional = new Storage(QSize(1000, 1000));}
+    case 0: {additional = new Storage();}
         break;
     case 1: // uruchom przyjęcia
         break;
@@ -54,7 +56,6 @@ void MainWindow::react(){
         break;
     }
     if(additional){
-        additional->exec();
-        delete additional;
+        additional->show();
     }
 }
