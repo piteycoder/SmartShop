@@ -20,17 +20,19 @@ Storage::~Storage()
 
 void Storage::screen_setup()
 {
-    search_area_setup();
-    _scroll_layout = new QHBoxLayout(this);
+    _search_area = new SearchProductArea();
+    _search_area->show();
+
+    /*_scroll_layout = new QHBoxLayout(this);
     _product_table = new QScrollArea(this);
     _text = new QLabel("TEST");
     QPushButton* button = new QPushButton("TROLO");
     _scroll_layout->addWidget(_text);
     _scroll_layout->addWidget(button);
-    setLayout(_scroll_layout);
+    setLayout(_scroll_layout);*/
 }
 
 void Storage::search_area_setup()
 {
-    _search_area = new SearchProductArea(this);
+    _search_area = new SearchProductArea();
 }
